@@ -8,12 +8,12 @@ android {
     compileSdkVersion = 36
 
     defaultConfig {
-        applicationId = "eu.faircode.netguard"
+        applicationId = "com.sadsha.netguard"
         versionName = "2.337"
         minSdkVersion 23
         targetSdkVersion 36
         versionCode = 2026080101
-        archivesBaseName = "NetGuard-v$versionName"
+        archivesBaseName = "SadShaNetGuard-v$versionName"
 
         externalNativeBuild {
             cmake {
@@ -58,7 +58,7 @@ android {
             signingConfig signingConfigs.release
             buildConfigField "boolean", "PLAY_STORE_RELEASE", "false"
             buildConfigField "String", "HOSTS_FILE_URI", "\"https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\""
-            buildConfigField "String", "GITHUB_LATEST_API", "\"https://api.github.com/repos/M66B/NetGuard/releases/latest\""
+            buildConfigField "String", "GITHUB_LATEST_API", "\"https://api.github.com/repos/rembghd/SadShaNetGuard/releases/latest\""
         }
         play {
             minifyEnabled = true
@@ -73,7 +73,7 @@ android {
             proguardFiles.add(file('proguard-rules.pro'))
             buildConfigField "boolean", "PLAY_STORE_RELEASE", "false"
             buildConfigField "String", "HOSTS_FILE_URI", "\"https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\""
-            buildConfigField "String", "GITHUB_LATEST_API", "\"https://api.github.com/repos/M66B/NetGuard/releases/latest\""
+            buildConfigField "String", "GITHUB_LATEST_API", "\"https://api.github.com/repos/rembghd/SadShaNetGuard/releases/latest\""
         }
     }
 
@@ -85,7 +85,7 @@ android {
     lint {
         disable 'MissingTranslation'
     }
-    namespace 'eu.faircode.netguard'
+    namespace 'com.sadsha.netguard'
     buildFeatures {
         aidl true
     }

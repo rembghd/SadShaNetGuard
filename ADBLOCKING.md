@@ -1,13 +1,13 @@
-Ad Blocking with NetGuard
+Ad Blocking with SadSha NetGuard
 -------------------------
 
 Instructions (you need to follow **all** the steps):
 
-1. Download/install the latest NetGuard version [from GitHub](https://github.com/M66B/NetGuard/releases) (ad blocking is not possible with the Play store version because Google does not allow ad blocking apps in the Play store)
+1. Download/install the latest SadSha NetGuard version [from GitHub](https://github.com/rembghd/SadShaNetGuard/releases) (ad blocking is not possible with the Play store version because Google does not allow ad blocking apps in the Play store)
 1. Enable the setting *'Filter traffic'* in the advanced options (three dot menu > Settings > Advanced options > Filter traffic; default is disabled except always enabled in Android 5.0 and earlier)
 1. Enable the setting *'Block domain names'* in the advanced options (three dot menu > Settings > Advanced options > Block domain names; default is enabled)
 1. Enable the setting *'Manage system apps'* in the advanced options (three dot menu > Settings > Advanced options > Manage system apps; default is disabled)
-1. Import or download [a hosts file](https://en.wikipedia.org/wiki/Hosts_(file)) using the NetGuard backup settings (three dot menu > Settings > Backup > Download hosts file)
+1. Import or download [a hosts file](https://en.wikipedia.org/wiki/Hosts_(file)) using the SadSha NetGuard backup settings (three dot menu > Settings > Backup > Download hosts file)
 1. Disable browser compression, secure DNS, etc. in the browser options.
 1. Wait at least 10 minutes to let the Android DNS cache time out (clear via Chrome: [chrome://net-internals/#dns](chrome://net-internals/#dns))
 1. Test to see if ad blocking works by opening [this page](http://www.netguard.me/test)
@@ -29,40 +29,40 @@ Because of routing bugs, some devices/Android versions require:
 Note that:
 
 * applications, like web browsers, may cache data, so you may need to clear caches
-* applications, browsers mostly, that have a *"data saver"*-like feature that proxies requests through their servers (eg. Opera w/ Turbo, Opera Max, Puffin, Chrome w/ data saver, UC Browser, Yandex w/ Turbo, Apus Browser, KK Browser, Onavo Extend, Maxthon) will not have ads blocked as NetGuard cannot see those domain requests
+* applications, browsers mostly, that have a *"data saver"*-like feature that proxies requests through their servers (eg. Opera w/ Turbo, Opera Max, Puffin, Chrome w/ data saver, UC Browser, Yandex w/ Turbo, Apus Browser, KK Browser, Onavo Extend, Maxthon) will not have ads blocked as SadSha NetGuard cannot see those domain requests
 * applications, browsers mostly, can have a private DNS feature (Chrome: three-dots menu, Settings, Privacy, Use secure DNS, turn off) **
 * applications, including browser, can be system apps, which require managing system apps in the advanced settings to be enabled
 * the Android always-on VPN setting *Block connections without VPN* will result in stop sending domain names to the VPN after some time
-* YouTube ads are not domain-based, and thus cannot be blocked with NetGuard
-* NetGuard ignores the IP addresses in the hosts file, because it does not route blocked domains to localhost
-* When NetGuard imports the hosts file, it automatically discards any duplicates entries, so duplicate entries are not a problem and have no performance impact after the file is imported
-* you can check the number of hosts (domains) imported by pulling the NetGuard notification down using two fingers if your version of Android supports that functionality
+* YouTube ads are not domain-based, and thus cannot be blocked with SadSha NetGuard
+* SadSha NetGuard ignores the IP addresses in the hosts file, because it does not route blocked domains to localhost
+* When SadSha NetGuard imports the hosts file, it automatically discards any duplicates entries, so duplicate entries are not a problem and have no performance impact after the file is imported
+* you can check the number of hosts (domains) imported by pulling the SadSha NetGuard notification down using two fingers if your version of Android supports that functionality
 * wildcards are not supported due to performance and battery usage reasons
-* it is not possible to edit the hosts file (change/add/delete domain names) with NetGuard
+* it is not possible to edit the hosts file (change/add/delete domain names) with SadSha NetGuard
 * you can disable ad blocking by disabling the setting *'Block domain names'* in the advanced options
 * you cannot exclude a single app from ad blocking because Android resolves domain names on behalf of all apps
 * **ad blocking is provided as-is**, see also [here](https://forum.xda-developers.com/showpost.php?p=71805655&postcount=4668)
-* **ad blocking is not available when NetGuard was installed from the Google Play store!** (disable automatic updates of NetGuard in the Play store application)
+* **ad blocking is not available when SadSha NetGuard was installed from the Google Play store!** (disable automatic updates of SadSha NetGuard in the Play store application)
 
 ** Some browsers (and also apps) now use DNS over TLS (DoT) or DNS over
 HTTPS (DoH). If one of the two protocols is active in the browser,
-NetGuard cannot "see" the outgoing DNS requests (due to encryption).
-They still flow through NetGuard, but are not treated as DNS requests,
+SadSha NetGuard cannot "see" the outgoing DNS requests (due to encryption).
+They still flow through SadSha NetGuard, but are not treated as DNS requests,
 but as normal connections (via port 853 or 443). It is therefore not
 sufficient to disable Private DNS within Android, but you must also
 check the settings for DoT and DoH (especially for browsers).
 
 <br />
 
-The NetGuard version from GitHub:
+The SadSha NetGuard version from GitHub:
 
 * is signed with the same signature as the version from the Google Play store, so any purchases will be restored (this will not happen with for example the F-Droid version)
-* will automatically notify you if there are updates available via GitHub (this can be switched off in NetGuard's settings)
+* will automatically notify you if there are updates available via GitHub (this can be switched off in SadSha NetGuard's settings)
 
 <br />
 
 Which hosts (ad servers) will be blocked depends on the hosts file being used.
-NetGuard downloads the [StevenBlack hosts file](https://github.com/StevenBlack/hosts) by default.
+SadSha NetGuard downloads the [StevenBlack hosts file](https://github.com/StevenBlack/hosts) by default.
 
 <br />
 
@@ -70,11 +70,11 @@ Automation:
 
 You can automatically download a hosts file by sending this service intent with your favorite automation tool, like Tasker:
 
-`eu.faircode.netguard.DOWNLOAD_HOSTS_FILE`
+`com.sadsha.netguard.DOWNLOAD_HOSTS_FILE`
 
 For example using [adb](https://developer.android.com/studio/command-line/adb.html) from the command line:
 
-`adb shell am startservice -a eu.faircode.netguard.DOWNLOAD_HOSTS_FILE`
+`adb shell am startservice -a com.sadsha.netguard.DOWNLOAD_HOSTS_FILE`
 
 <br />
 
@@ -96,7 +96,7 @@ An alternate way to block advertisements is by using special DNS servers, like t
 
 Be sure to read the privacy policies of these services as they might log your DNS requests.
 
-You can set DNS server addresses for all connection types in NetGuard's *Advanced options*.
+You can set DNS server addresses for all connection types in SadSha NetGuard's *Advanced options*.
 Note that when you set two DNS server addresses, the default (operating system/network provider) DNS servers will not be used anymore.
 
 Feel free to let me know about other servers or request to add them in alphabetic order by doing a pull request.

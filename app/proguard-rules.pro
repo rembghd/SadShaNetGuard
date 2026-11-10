@@ -20,8 +20,8 @@
 -renamesourcefileattribute SourceFile
 -keepattributes SourceFile,LineNumberTable
 
-#NetGuard
--keepnames class eu.faircode.netguard.** { *; }
+#SadSha NetGuard
+-keepnames class com.sadsha.netguard.** { *; }
 
 #JNI
 -keepclasseswithmembernames class * {
@@ -29,19 +29,19 @@
 }
 
 #JNI callbacks
--keep class eu.faircode.netguard.Allowed { *; }
--keep class eu.faircode.netguard.Packet { *; }
--keep class eu.faircode.netguard.ResourceRecord { *; }
--keep class eu.faircode.netguard.Usage { *; }
--keep class eu.faircode.netguard.ServiceSinkhole {
+-keep class com.sadsha.netguard.Allowed { *; }
+-keep class com.sadsha.netguard.Packet { *; }
+-keep class com.sadsha.netguard.ResourceRecord { *; }
+-keep class com.sadsha.netguard.Usage { *; }
+-keep class com.sadsha.netguard.ServiceSinkhole {
     void nativeExit(java.lang.String);
     void nativeError(int, java.lang.String);
-    void logPacket(eu.faircode.netguard.Packet);
-    void dnsResolved(eu.faircode.netguard.ResourceRecord);
+    void logPacket(com.sadsha.netguard.Packet);
+    void dnsResolved(com.sadsha.netguard.ResourceRecord);
     boolean isDomainBlocked(java.lang.String);
     int getUidQ(int, int, java.lang.String, int, java.lang.String, int);
-    eu.faircode.netguard.Allowed isAddressAllowed(eu.faircode.netguard.Packet);
-    void accountUsage(eu.faircode.netguard.Usage);
+    com.sadsha.netguard.Allowed isAddressAllowed(com.sadsha.netguard.Packet);
+    void accountUsage(com.sadsha.netguard.Usage);
 }
 
 #AndroidX
