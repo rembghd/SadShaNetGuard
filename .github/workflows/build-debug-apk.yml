@@ -28,11 +28,16 @@ jobs:
           java-version: "17"
           distribution: "temurin"
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Install Android SDK packages
+      # The ubuntu runner already ships a full Android SDK. Do NOT use
+      # android-actions/setup-android here: its built-in license-accept
+      # step runs `sdkmanager --licenses` without piped input and fails
+      # with exit code 1 (run 43927419750). Pipe `yes` ourselves instead.
+      - name: Set up Android SDK (preinstalled on runner)
         run: |
+          echo "ANDROID_HOME=/usr/local/lib/android/sdk" >> $GITHUB_ENV
+          echo "ANDROID_SDK_ROOT=/usr/local/lib/android/sdk" >> $GITHUB_ENV
+          echo "/usr/local/lib/android/sdk/platform-tools" >> $GITHUB_PATH
+          echo "/usr/local/lib/android/sdk/cmdline-tools/latest/bin" >> $GITHUB_PATH
           yes | sdkmanager --licenses
           sdkmanager "platforms;android-36" "build-tools;36.0.0" "ndk;25.2.9519653" "cmake;3.22.1"
 
