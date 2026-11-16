@@ -38,6 +38,13 @@
     <color name="colorGreenOn">#8BC34A</color>
     <color name="colorGreenOff">#F44336</color>
 
+
+    <color name="colorSadShaPrimary">#F59E0B</color>
+    <color name="colorSadShaPrimaryDark">#78350F</color>
+    <color name="colorSadShaAccent">#B45309</color>
+    <color name="colorSadShaOn">#F59E0B</color>
+    <color name="colorSadShaOff">#B45309</color>
+
     <color name="colorSend">#FF0000</color>
     <color name="colorReceive">#0000FF</color>
 

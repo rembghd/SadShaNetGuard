@@ -10,10 +10,10 @@
 
     <wifi
         blocked="false"
-        package="eu.faircode.netguard" />
+        package="com.sadsha.netguard" />
     <other
         blocked="false"
-        package="eu.faircode.netguard"
+        package="com.sadsha.netguard"
         roaming="false" />
 
     <wifi
