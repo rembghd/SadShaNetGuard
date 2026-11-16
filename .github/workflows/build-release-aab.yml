@@ -78,5 +78,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: sadshanetguard-release-aab
-          path: app/build/outputs/bundle/playRelease/app-play-release.aab
+          path: app/build/outputs/bundle/playRelease/*.aab
           retention-days: 30
