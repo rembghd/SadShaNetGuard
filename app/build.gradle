@@ -18,12 +18,12 @@ android {
     // 'com.sadsha.netguard' broke every R reference ("package R does not
     // exist"). The install identity is applicationId below, not namespace.
     namespace 'eu.faircode.netguard'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.sadsha.netguard"
         minSdk 21
-        targetSdk 34
+        targetSdk 35
         versionCode 202602
         versionName "3.1.0-sadsha"
 

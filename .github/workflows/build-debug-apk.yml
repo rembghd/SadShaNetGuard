@@ -42,7 +42,7 @@ jobs:
           # sdkmanager path in this step.
           SDKMANAGER=/usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager
           yes | "$SDKMANAGER" --licenses
-          "$SDKMANAGER" "platforms;android-34" "build-tools;34.0.0" "ndk;25.2.9519653" "cmake;3.22.1"
+          "$SDKMANAGER" "platforms;android-34" "platforms;android-35" "build-tools;34.0.0" "ndk;25.2.9519653" "cmake;3.22.1"
 
       - name: Generate throwaway debug keystore
         run: |
