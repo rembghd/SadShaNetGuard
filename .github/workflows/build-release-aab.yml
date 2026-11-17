@@ -15,6 +15,12 @@ name: Build release AAB
 
 on:
   workflow_dispatch:
+  # Registers the workflow with GitHub on first push (a workflow_dispatch-only
+  # file on a non-default branch is invisible to the API until it has run once).
+  # Path filter means this only fires when this file itself changes.
+  push:
+    branches: [ai-studio]
+    paths: [.github/workflows/build-release-aab.yml]
 
 jobs:
   build:
