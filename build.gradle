@@ -9,13 +9,8 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
+// NOTE: dependency repositories (google() / mavenCentral()) are declared
+// in settings.gradle (FAIL_ON_PROJECT_REPOS), so no allprojects block here.
 tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
