@@ -794,7 +794,6 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
         return true;
     }
 
-    }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
