@@ -1,1 +1,30 @@
-<p><i>NetGuard</i> provides simple and advanced ways to block access to the internet - no root required.</p><p>Applications and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection.</p><p>Blocking access to the internet can help:</p><ul><li>reduce your data usage</li><li>save your battery</li><li>increase your privacy</li></ul><p><br><b>Features:</b></p><ul><li>Simple to use</li><li>No root required</li><li>100% open source</li><li>No calling home</li><li>No tracking or analytics</li><li>No advertisements</li><li>Actively developed and supported</li><li>Android 5.1 and later supported</li><li>IPv4/IPv6 TCP/UDP supported</li><li>Tethering supported</li><li>Optionally allow when screen on</li><li>Optionally block when roaming</li><li>Optionally block system applications</li><li>Optionally notify when an application accesses the internet</li><li>Optionally record network usage per application per address</li><li>Material design theme with light and dark theme</li></ul><p><br><b>PRO features:</b></p><ul><li>Log all outgoing traffic; search and filter access attempts; export PCAP files to analyze traffic</li><li>Allow/block individual addresses per application</li><li>New application notifications; configure NetGuard directly from the notification</li><li>Display network speed graph in a status bar notification</li><li>Select from five additional themes in both light and dark version</li></ul><p>There is no other no-root firewall offering all these features.</p><p>If you have a question or problem, you can send an e-mail to <a href='mailto:marcel+netguard@faircode.eu'>marcel+netguard@faircode.eu</a></p><p>If you like to help people less fluent in English, you can help <a href='https://crowdin.com/project/netguard/' target='_blank' rel='nofollow'>translate NetGuard in your language</a></p><p>If you like to test new features, you can <a href='https://play.google.com/apps/testing/eu.faircode.netguard' target='_blank' rel='nofollow'>participate in the test program</a></p><p>All required permissions are <a href='https://github.com/M66B/NetGuard/blob/master/FAQ.md#user-content-faq42' target='_blank' rel='nofollow'>described here</a></p>
+SadSha NetGuard provides simple and advanced ways to block access to the internet — without requiring root access. Applications and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile network connections.
+
+Blocking internet access helps you:
+• Reduce unwanted mobile data usage and avoid unexpected roaming charges
+• Save your battery by preventing silent background sync and tracking
+• Protect your personal privacy against unauthorized telemetry and trackers
+
+KEY FEATURES:
+• Simple and clean to use: Toggle Wi-Fi or mobile data per app with a single tap
+• 100% No Root Required: Safe, secure, and hassle-free
+• Zero Telemetry: No calling home, no remote tracking, and no external analytics
+• 100% On-Device Operation: All network routing happens strictly on your local phone
+• IPv4 / IPv6 and TCP / UDP support
+• Tethering and Wi-Fi hotspot support
+• Optional lockdown mode: Restrict background traffic when screen is off
+• Optional roaming protection: Automatically block bandwidth-heavy apps abroad
+• Block system applications and bloatware with full control
+• Smart Security Profiles: Instant one-tap profiles for Gaming Turbo, Extreme Data Saver, and Night Shield
+• Custom DNS & Hosts Adblocking: Block intrusive advertising networks at DNS level
+• Lightweight & Battery Friendly: Minimal memory footprint and dark mode themes
+
+PRO FEATURES:
+• Live Outgoing Traffic Log: Search, filter, and inspect connections and IP addresses in real time
+• Packet Capture (PCAP): Export network capture dumps for in-depth traffic analysis
+• Per-Address Rule Management: Allow or block specific domain names and IP addresses per app
+• Status Bar Speed Monitor: Real-time network speed graph notification
+• Custom Themes: Five beautiful Material Design color themes in light and dark modes
+
+WHY DOES SADSHA NETGUARD USE A VPN?
+SadSha NetGuard uses Android's local VpnService API to route your device's network traffic to itself on-device. This allows it to filter network packets locally without routing your data through an external remote VPN server or third-party proxy. Your data never leaves your device.

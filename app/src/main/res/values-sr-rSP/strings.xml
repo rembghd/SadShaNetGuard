@@ -3,7 +3,7 @@
     <string name="app_description">Нетгард нуди једноставне и напредне начине блокирања приступа интернету без потребе за рутовањем. Апликацијама и адресама се може појединачно дозволити или одбити приступ бежичној и/или мобилној вези.</string>
     <string name="app_android">Нетгард захтева Андроид 5.1 или новији</string>
     <string name="app_xposed">\'Xposed\' изазива превише грешака које могу резултирати да Нетгард буде уклоњен са Гугл плеј продвнице. Стога, Нетгард није подржан док је \'Xposed\' инсталиран</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Политика приватности</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Политика приватности</a></string>
     <string name="app_first">Огромна пажња је посвећена развоју и тестирању Нетгард апликације. Међутим, немогуће је гарантовати да ће Нетгард радити исправно на сваком уређају.</string>
     <string name="app_agree">Слажем се</string>
     <string name="app_disagree">Не слажем се</string>

@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard cung cấp những cách đơn giản và nâng cao để chặn quyền truy cập vào internet - không yêu cầu root. Ứng dụng và địa chỉ có thể được cá nhân cho phép hoặc từ chối truy cập Wi-Fi và/hoặc kết nối di động của bạn.</string>
     <string name="app_android">NetGuard yêu cầu Android 5.1 hoặc cao hơn</string>
     <string name="app_xposed">Xposed gây ra quá nhiều lỗi, mà có ảnh hưởng đến NetGuard bị gỡ bỏ khỏicửa hàng Google Play; Do đó, NetGuard sẽ không được hỗ trợ nếu Xposed được cài đặt.</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Chính sách riêng tư</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Chính sách riêng tư</a></string>
     <string name="app_first">Tôi đã rất cẩn thận để phát triển và thử nghiệm NetGuard, tuy nhiên không thể đảm bảo NetGuard sẽ làm việc chính xác trên mọi thiết bị.</string>
     <string name="app_agree">Tôi đồng ý</string>
     <string name="app_disagree">Tôi không đồng ý</string>

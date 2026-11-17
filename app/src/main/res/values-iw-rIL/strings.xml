@@ -4,7 +4,7 @@
 היא מאפשרת לחסום או לאפשר באופן פרטני גישת יישומים לרשתות Wi-Fi או אינטרנט סלולרי.</string>
     <string name="app_android">NetGuard זקוק לגירסת אנדרואיד 5 ומעלה</string>
     <string name="app_xposed">Xposed גורם ליותר מדי קריסות, אשר עלולות לגרום להסרת NetGuard מהPlay Google, ולכן NetGuard לא תפעל כל עוד Xposed מותקן</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/"> מדיניות פרטיות</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md"> מדיניות פרטיות</a></string>
     <string name="app_first">תשומת לב רבה הושקעה בפיתוח ובדיקת NetGuard, אך לא ניתן לערוב שNetGuard תעבוד על כל סוגי המכשירים.</string>
     <string name="app_agree">אני מסכים</string>
     <string name="app_disagree">אני לא מסכים</string>

@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard gir enkle og avanserte måter å blokkere tilgang til internett - ingen root er nødvendig. Apper og adresser kan enkelt tillates eller nektes tilgang til Wi-Fi- og/eller mobilforbindelsen din.</string>
     <string name="app_android">NetGuard krever Android 5.1 eller nyere</string>
     <string name="app_xposed">Xposed forårsaker for mange krasjer, noe som kan føre til at NetGuard blir fjernet fra Google Play Store, derfor støttes ikke NetGuard mens Xposed er installert</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Privatlivsretningslinjer</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Privatlivsretningslinjer</a></string>
     <string name="app_first">Stort omhu er brukt i utvikling og testing av NetGuard, men det umulig å garantere at NetGuard vil fungere korrekt på alle enheter.</string>
     <string name="app_agree">Jeg aksepter</string>
     <string name="app_disagree">Jeg aksepter ikke</string>

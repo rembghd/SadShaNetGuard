@@ -19,23 +19,17 @@ package eu.faircode.netguard;
     Copyright 2015-2026 by Marcel Bokhorst (M66B)
 */
 
-import android.app.PendingIntent;
+// SadSha NetGuard free v1: there is no billing and no purchase flow.
+// Every feature is unlocked for everyone, so this class is a stub that
+// always reports "purchased". The original Play Billing implementation
+// (IInAppBillingService AIDL) was removed with it. Call sites are
+// unchanged, so no other file had to be touched for this.
+
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
 import android.content.ServiceConnection;
-import android.content.SharedPreferences;
-import android.os.Bundle;
 import android.os.IBinder;
-import android.os.RemoteException;
 import android.util.Log;
-
-import androidx.preference.PreferenceManager;
-
-import com.android.vending.billing.IInAppBillingService;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,9 +39,6 @@ public class IAB implements ServiceConnection {
 
     private Context context;
     private Delegate delegate;
-    private IInAppBillingService service = null;
-
-    private static final int IAB_VERSION = 3;
 
     public interface Delegate {
         void onReady(IAB iab);
@@ -59,158 +50,56 @@ public class IAB implements ServiceConnection {
     }
 
     public void bind() {
-        Log.i(TAG, "Bind");
-        Intent serviceIntent = new Intent("com.android.vending.billing.InAppBillingService.BIND");
-        serviceIntent.setPackage("com.android.vending");
-        context.bindService(serviceIntent, this, Context.BIND_AUTO_CREATE);
+        // No billing service in the free build.
+        Log.i(TAG, "Bind (stub: no billing)");
     }
 
     public void unbind() {
-        if (service != null) {
-            Log.i(TAG, "Unbind");
-            context.unbindService(this);
-            service = null;
-        }
+        // No billing service in the free build.
     }
 
     @Override
     public void onServiceConnected(ComponentName name, IBinder binder) {
-        Log.i(TAG, "Connected");
-        service = IInAppBillingService.Stub.asInterface(binder);
-        delegate.onReady(this);
+        // Never called: no billing service is bound.
     }
 
     @Override
     public void onServiceDisconnected(ComponentName name) {
-        Log.i(TAG, "Disconnected");
-        service = null;
+        // Never called: no billing service is bound.
     }
 
-    public boolean isAvailable(String sku) throws RemoteException, JSONException {
-        // Get available SKUs
-        ArrayList<String> skuList = new ArrayList<>();
-        skuList.add(sku);
-        Bundle query = new Bundle();
-        query.putStringArrayList("ITEM_ID_LIST", skuList);
-        Bundle bundle = service.getSkuDetails(IAB_VERSION, context.getPackageName(), "inapp", query);
-        Log.i(TAG, "getSkuDetails");
-        Util.logBundle(bundle);
-        int response = (bundle == null ? -1 : bundle.getInt("RESPONSE_CODE", -1));
-        Log.i(TAG, "Response=" + getResult(response));
-        if (response != 0)
-            throw new IllegalArgumentException(getResult(response));
-
-        // Check available SKUs
-        boolean found = false;
-        ArrayList<String> details = bundle.getStringArrayList("DETAILS_LIST");
-        if (details != null)
-            for (String item : details) {
-                JSONObject object = new JSONObject(item);
-                if (sku.equals(object.getString("productId"))) {
-                    found = true;
-                    break;
-                }
-            }
-        Log.i(TAG, sku + "=" + found);
-
-        return found;
+    public boolean isAvailable(String sku) {
+        return false;
     }
 
-    public void updatePurchases() throws RemoteException {
-        // Get purchases
-        List<String> skus = new ArrayList<>();
-        skus.addAll(getPurchases("inapp"));
-        skus.addAll(getPurchases("subs"));
-
-        SharedPreferences prefs = context.getSharedPreferences("IAB", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        for (String product : prefs.getAll().keySet())
-            if (!ActivityPro.SKU_DONATION.equals(product)) {
-                Log.i(TAG, "removing SKU=" + product);
-                editor.remove(product);
-            }
-        for (String sku : skus) {
-            Log.i(TAG, "adding SKU=" + sku);
-            editor.putBoolean(sku, true);
-        }
-        editor.apply();
+    public void updatePurchases() {
+        // Nothing to update: everything is unlocked.
     }
 
-    public boolean isPurchased(String sku, String type) throws RemoteException {
-        return getPurchases(type).contains(sku);
+    public boolean isPurchased(String sku, String type) {
+        return true;
     }
 
-    public List<String> getPurchases(String type) throws RemoteException {
-        // Get purchases
-        Bundle bundle = service.getPurchases(IAB_VERSION, context.getPackageName(), type, null);
-        Log.i(TAG, "getPurchases");
-        Util.logBundle(bundle);
-        int response = (bundle == null ? -1 : bundle.getInt("RESPONSE_CODE", -1));
-        Log.i(TAG, "Response=" + getResult(response));
-        if (response != 0)
-            throw new IllegalArgumentException(getResult(response));
-
-        ArrayList<String> details = bundle.getStringArrayList("INAPP_PURCHASE_ITEM_LIST");
-        return (details == null ? new ArrayList<String>() : details);
+    public List<String> getPurchases(String type) {
+        return new ArrayList<String>();
     }
 
-    public PendingIntent getBuyIntent(String sku, boolean subscription) throws RemoteException {
-        if (service == null)
-            return null;
-        Bundle bundle = service.getBuyIntent(IAB_VERSION, context.getPackageName(), sku, subscription ? "subs" : "inapp", "netguard");
-        Log.i(TAG, "getBuyIntent sku=" + sku + " subscription=" + subscription);
-        Util.logBundle(bundle);
-        int response = (bundle == null ? -1 : bundle.getInt("RESPONSE_CODE", -1));
-        Log.i(TAG, "Response=" + getResult(response));
-        if (response != 0)
-            throw new IllegalArgumentException(getResult(response));
-        if (!bundle.containsKey("BUY_INTENT"))
-            throw new IllegalArgumentException("BUY_INTENT missing");
-        return bundle.getParcelable("BUY_INTENT");
+    public android.app.PendingIntent getBuyIntent(String sku, boolean subscription) {
+        return null;
     }
 
     public static void setBought(String sku, Context context) {
-        Log.i(TAG, "Bought " + sku);
-        SharedPreferences prefs = context.getSharedPreferences("IAB", Context.MODE_PRIVATE);
-        prefs.edit().putBoolean(sku, true).apply();
+        Log.i(TAG, "Bought " + sku + " (stub: already unlocked)");
     }
 
     public static boolean isPurchased(String sku, Context context) {
-        try {
-            if (Util.isDebuggable(context)) {
-                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-                return !prefs.getBoolean("debug_iab", false);
-            }
-
-            SharedPreferences prefs = context.getSharedPreferences("IAB", Context.MODE_PRIVATE);
-            if (ActivityPro.SKU_SUPPORT1.equals(sku) || ActivityPro.SKU_SUPPORT2.equals(sku))
-                return prefs.getBoolean(sku, false);
-
-            return (prefs.getBoolean(sku, false) ||
-                    prefs.getBoolean(ActivityPro.SKU_PRO1, false) ||
-                    prefs.getBoolean(ActivityPro.SKU_SUPPORT1, false) ||
-                    prefs.getBoolean(ActivityPro.SKU_SUPPORT2, false) ||
-                    prefs.getBoolean(ActivityPro.SKU_DONATION, false));
-        } catch (SecurityException ignored) {
-            return false;
-        }
+        // Free v1: all features unlocked for everyone.
+        return true;
     }
 
     public static boolean isPurchasedAny(Context context) {
-        try {
-            if (Util.isDebuggable(context)) {
-                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-                return !(prefs.getBoolean("debug_iab", false));
-            }
-
-            SharedPreferences prefs = context.getSharedPreferences("IAB", Context.MODE_PRIVATE);
-            for (String key : prefs.getAll().keySet())
-                if (prefs.getBoolean(key, false))
-                    return true;
-            return false;
-        } catch (SecurityException ignored) {
-            return false;
-        }
+        // Free v1: all features unlocked for everyone.
+        return true;
     }
 
     public static String getResult(int responseCode) {

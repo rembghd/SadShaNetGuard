@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard fornisce sia opzioni semplici che avanzate per bloccare l\'accesso a internet - non necessita di root. Alle applicazioni ed agli indirizzi può essere consentito o negato, singolarmente, l\'accesso alle connessioni Wi-Fi e/o mobile.</string>
     <string name="app_android">NetGuard richiede Android 5.1 o successiva</string>
     <string name="app_xposed">Xposed causa troppi arresti anomali, che potrebbero risultare nella rimozione di NetGuard da Google Play Store, dunque NetGuard non è supportato mentre Xposed è installata</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Politica della privacy</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Politica della privacy</a></string>
     <string name="app_first">Si è posta grande attenzione nello sviluppo e test di NetGuard, tuttavia è impossibile garantire che funzionerà correttamente su ogni dispositivo.</string>
     <string name="app_agree">Acconsento</string>
     <string name="app_disagree">Nego il consenso</string>

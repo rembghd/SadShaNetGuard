@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard, internet erişimini engellemek için basit ve gelişmiş yollar sunar - root gerektirmez. Uygulamaların ve adreslerin, Wi-Fi ve/veya mobil bağlantınıza erişimine ayrı ayrı izin verilebilir veya reddedilebilir.</string>
     <string name="app_android">NetGuard, Android 5.1 veya üzerini gerektirir</string>
     <string name="app_xposed">Xposed, NetGuard\'ın Google Play Store\'dan kaldırılmasına neden olabilecek kadar fazla çökmeye sebebiyet verir, bu nedenle NetGuard, Xposed yüklüyken desteklenmez</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Gizlilik ilkesi</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Gizlilik ilkesi</a></string>
     <string name="app_first">NetGuard\'ın geliştirilip test edilmesi için büyük özen gösterilmiştir fakat her cihazda doğru çalışacağını garanti etmek imkansızdır.</string>
     <string name="app_agree">Kabul ediyorum</string>
     <string name="app_disagree">Reddediyorum</string>

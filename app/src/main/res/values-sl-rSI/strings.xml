@@ -2,7 +2,7 @@
 <resources>
     <string name="app_description">NetGuard zagotavlja preprost in napreden način za blokiranje interneta - koren nu potreben. Aplikacije in naslovi so lahko posamično dovoljeni ali blokirani pri dostopanju do vašega Wi-Fi in/ali mobilne povezave.</string>
     <string name="app_xposed">Xposed povzroča preveč zrušitev, ki lahko vodijo k odstranitvjiji NetGuard iz Google Play Store, zato NetGuard nemore delovati ko je Xposed naložen</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Politika zasebnosti</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Politika zasebnosti</a></string>
     <string name="app_agree">Strinjam se</string>
     <string name="app_disagree">Ne strinjam se</string>
     <string name="channel_foreground">Izvajajo storitve</string>

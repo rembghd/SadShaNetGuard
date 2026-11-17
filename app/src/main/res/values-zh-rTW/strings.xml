@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard 提供簡易與進階方式封鎖網際網路存取 - 無須 root 權限。您可以個別允許或拒絕 apps 與網址存取您的 Wi-Fi 和/或行動數據連線。</string>
     <string name="app_android">NetGuard 需要 5.1 版以上的 Android</string>
     <string name="app_xposed">Xpose 框架會引發過多崩潰，那會導致 Google Play 商店將 NetGuard 移除，因此當您安裝 Xposed 框架時，NetGuard 將不被支援。</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">隱私權政策</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">隱私權政策</a></string>
     <string name="app_first">雖然我們已花費許多心力維護及開發 NetGuard，但我們無法保證 NetGuard 能在每種裝置上正常運作。</string>
     <string name="app_agree">我同意</string>
     <string name="app_disagree">我不同意</string>

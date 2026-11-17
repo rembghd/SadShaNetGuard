@@ -20,8 +20,9 @@
 -renamesourcefileattribute SourceFile
 -keepattributes SourceFile,LineNumberTable
 
-#NetGuard
+#NetGuard & SadSha NetGuard
 -keepnames class eu.faircode.netguard.** { *; }
+-keepnames class com.sadsha.netguard.** { *; }
 
 #JNI
 -keepclasseswithmembernames class * {
@@ -43,6 +44,7 @@
     eu.faircode.netguard.Allowed isAddressAllowed(eu.faircode.netguard.Packet);
     void accountUsage(eu.faircode.netguard.Usage);
 }
+-keep class com.sadsha.netguard.** { *; }
 
 #AndroidX
 -keep class androidx.appcompat.widget.** { *; }
@@ -53,10 +55,4 @@
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep public class * extends com.bumptech.glide.module.AppGlideModule
 -keep enum com.bumptech.glide.** {*;}
-#-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
-#    **[] $VALUES;
-#    public *;
-#}
 
-#AdMob
--dontwarn com.google.android.gms.internal.**

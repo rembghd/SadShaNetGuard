@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard, root-a ehtiyac olmadan internetə müraciəti əngəlləmək üçün sadə və qabaqcıl yolları təqdim edir. Wi-Fi və/və ya mobil bağlantı üzərindən tətbiqlər və ünvanlar üçün internetə müraciəti tək-tək ləğv edə bilərsiniz.</string>
     <string name="app_android">NetGuard, Android 5.1 və daha yuxarı versiyanı tələb edir</string>
     <string name="app_xposed">Xposed, NetGuard-ın Google Play Store-dan çıxarılmasına səbəb ola biləcək bir çox çökməyə səbəb ola bilər. Buna görə də, NetGuard, Xposed quraşdırılarkən dəstəklənmir</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Gizlilik siyasəti</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Gizlilik siyasəti</a></string>
     <string name="app_first">NetGuard-ı tərtib etmək və sınaqdan keçirmək üçün böyük diqqət göstərilmişdir, ancaq NetGuard-ın hər cihazda düzgün işləməyinə zəmanət vermək mümkünsüzdür.</string>
     <string name="app_agree">Razıyam</string>
     <string name="app_disagree">Razı deyiləm</string>

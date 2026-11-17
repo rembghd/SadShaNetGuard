@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard tarjoaa yksinkertaisia ja edistyneitä keinoja estää yhteydet internettiin - ilman tarvetta root-oikeuksille. Sovelluksille ja osoitteille voi yksilöllisesti sallia tai estää pääsyn Wi-Fi- ja/tai mobiiliyhteyteesi.</string>
     <string name="app_android">NetGuard edellyttää vähintään Android versiota 5.1</string>
     <string name="app_xposed">Xposed aiheuttaa liikaa kaatumisia, minkä takia NetGuard saatetaan poistaa Google Play Kaupasta, joten NetGuard ei ole tuettu, kun Xposed on asennettuna</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Tietosuojakäytäntö</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Tietosuojakäytäntö</a></string>
     <string name="app_first">NetGuardia kehitettäessä ja testatessa on noudatettu suurta huolellisuutta, mutta on mahdotonta taata, että se toimii oikein kaikissa laitteissa.</string>
     <string name="app_agree">Hyväksyn</string>
     <string name="app_disagree">En hyväksy</string>

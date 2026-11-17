@@ -3,7 +3,7 @@
     <string name="app_description">Ang NetGuard ang nagbibigay ng simple at pinahusay na mga paraan para harangan ang akses sa internet - ang root ay hindi kinakailangan. Ang mga App at mga adres ay isa-isang pinapayagan o tinatanggihan ang akses sa iyong Wi-Fi at/o sa iyong mobile koneksyon.</string>
     <string name="app_android">NetGuard requires Android 5.1 or later</string>
     <string name="app_xposed">Ang Xposed ang nagiging dahilan kung bakit masyadong maraming salpukan, kung saan ay nagiging resulta na ang NetGuard ay tinatanggal mula sa Google Play Store, kaya ang NetGuard at hindi suportado habang ang Xposed ay naka-install</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Ang patakaran sa pagiging pribado</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Ang patakaran sa pagiging pribado</a></string>
     <string name="app_agree">Ako ay sumasang-ayon</string>
     <string name="app_disagree">Ako ay hindi sumasang-ayon</string>
     <string name="channel_foreground">Pinapatakbo ang mga serbisyo</string>

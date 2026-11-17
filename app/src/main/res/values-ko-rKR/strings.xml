@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard는 루트 없이 인터넷 접근을 막는 간단하면서도 발전된 방법을 제공합니다. 각각의 앱이나 주소가 Wi-Fi나 모바일 데이터에 접근하는 것을 허용할 지, 거부할 지 설정할 수 있습니다.</string>
     <string name="app_android">NetGuard 는 안드로이드 버전 5.1 이상에서 작동합니다</string>
     <string name="app_xposed">Xposed와 너무 많은 충돌을 일으켜서 NetGuard가 Google Play 스토어에서 내려갈 수 있기 때문에, Xposed가 설치되어 있는 동안에는 NetGuard를 사용할 수 없습니다</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">개인정보 보호 정책</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">개인정보 보호 정책</a></string>
     <string name="app_first">NetGuard의 제작과 테스트에 많은 시간을 쏟았지만, 모든 기기에서 완벽하게 돌아가는 걸 장담할 수는 없습니다.</string>
     <string name="app_agree">동의합니다</string>
     <string name="app_disagree">동의하지 않습니다</string>

@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard无须root权限，能简便专业地阻止应用连接网络，亦可允许或拒绝个别应用和地址使用Wi-Fi和移动数据。</string>
     <string name="app_android">NetGuard只可用于Android 5.1或更新版本</string>
     <string name="app_xposed">NetGuard不能与Xposed并用，因为Xposed经常崩溃，从而导致NetGuard从Google Play移除。</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">隐私政策</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">隐私政策</a></string>
     <string name="app_first">尽管我们已精心努力开发和测试NetGuard，我们依然无法保证NetGuard将在每台设备上正常运作。</string>
     <string name="app_agree">同意</string>
     <string name="app_disagree">拒绝</string>

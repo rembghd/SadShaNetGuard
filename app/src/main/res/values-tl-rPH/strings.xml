@@ -2,7 +2,7 @@
 <resources>
     <string name="app_description">Ang NetGuard ay nagbibigay daan sa payak at pinahusay na mga pamamaraan upang hadlangan ang pag-access sa internet - na hindi nangangailangan ng pag-root. Ang mga app at mga addresses ay maaring isa-isang pahintulutan o hadlangan sa pag-access sa iyong Wi-Fi at/o koneksiyon sa mobile.</string>
     <string name="app_xposed">Ang Xposed ay nagdudulot ng maraming pagkakataon ng pag-crash, na maaaring magresulta sa pagtanggal ng NetGuard mula sa Google Play Store, dahil dito and NetGuard ay hindi suportado habang naka-install ang Xposed</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Patakaran sa Pagiging Pribado</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Patakaran sa Pagiging Pribado</a></string>
     <string name="app_agree">Sumasang-ayon ako</string>
     <string name="app_disagree">Hindi ako sumasang-ayon</string>
     <string name="channel_foreground">Gumaganang mga serbisyo</string>

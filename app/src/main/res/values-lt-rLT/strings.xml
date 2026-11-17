@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard užtikrina lengvą ir pažengusį metodus apribojant prieigą prie interneto, nereikalaujančius root teisių. Atskiros programos ir adresai gali būti leidžiami ar blokuojami pasiekti Wi-Fi ir/ar mobiliuosius duomenis.</string>
     <string name="app_android">NetGuard veiks su Android 5.1 arba naujesne versija</string>
     <string name="app_xposed">Xposed modulis kelia per daug strigčių, todėl NetGuard gali būti pašalinta iš Google Play parduotuvės. Kol yra įdiegta Xposed modulis, NetGuard nebus palaikoma</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Privatumo politika</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Privatumo politika</a></string>
     <string name="app_first">NetGuard kūrimui ir bandymams buvo įdėta daug pastangų, vis dėlto neįmanoma užtikrinti, jog NetGuard tinkamai veiks visuose įrenginiuose.</string>
     <string name="app_agree">Sutinku</string>
     <string name="app_disagree">Nesutinku</string>

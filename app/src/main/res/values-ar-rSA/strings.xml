@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard يوفر طرق بسيطة ومتقدمة لمنع الوصول إلى شبكة الإنترنت - لا يلزم الجذر. يمكن السماح أو الرفض بشكل فردي للتطبيقات والعناوين النفاذ إلى الواي فاي أو الإتصال عبر الجوال.</string>
     <string name="app_android">NetGuard requires Android 5.1 or later</string>
     <string name="app_xposed">يسبب Xposed الكثير من الأعطال ، مما قد يؤدي إلى إزالة NetGuard من متجر Google Play ، لذلك لا يتم دعم NetGuard إن تم تثبيت Xposed</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">سياسة الخصوصية</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">سياسة الخصوصية</a></string>
     <string name="app_first">تم تطوير وتجربة NetGuard بعناية فائقة ولكن من الممكن ألّا يعمل NetGuard بشكل جيد في بعض الاجهزة.</string>
     <string name="app_agree">أنا أوافق</string>
     <string name="app_disagree">لا أوافق</string>

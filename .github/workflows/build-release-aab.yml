@@ -1,0 +1,82 @@
+# SadSha NetGuard — RELEASE AAB for Google Play.
+#
+# Run ONLY when Qasim says so. Before the first run he must:
+#   1. Create his own release keystore (his step, never committed).
+#   2. Add these 4 repository secrets (Settings -> Secrets -> Actions):
+#        KEYSTORE_BASE64     - base64 of the release .keystore file
+#        KEYSTORE_PASSWORD   - keystore password
+#        KEY_ALIAS           - key alias
+#        KEY_PASSWORD        - key password
+# The workflow writes keystore.properties from those secrets, builds the
+# release bundle (signed with his keystore), and uploads the AAB
+# as an artifact. Uploading the AAB to Play Console is Qasim's own step.
+
+name: Build release AAB
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ai-studio
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: "temurin"
+
+      # The ubuntu runner already ships a full Android SDK. Do NOT use
+      # android-actions/setup-android here: its built-in license-accept
+      # step runs `sdkmanager --licenses` without piped input and fails
+      # with exit code 1. Pipe `yes` ourselves instead.
+      - name: Set up Android SDK (preinstalled on runner)
+        run: |
+          echo "ANDROID_HOME=/usr/local/lib/android/sdk" >> $GITHUB_ENV
+          echo "ANDROID_SDK_ROOT=/usr/local/lib/android/sdk" >> $GITHUB_ENV
+          echo "/usr/local/lib/android/sdk/platform-tools" >> $GITHUB_PATH
+          echo "/usr/local/lib/android/sdk/cmdline-tools/latest/bin" >> $GITHUB_PATH
+          # NOTE: $GITHUB_PATH only applies to LATER steps, so use the full
+          # sdkmanager path in this step.
+          SDKMANAGER=/usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager
+          yes | "$SDKMANAGER" --licenses
+          "$SDKMANAGER" "platforms;android-34" "build-tools;34.0.0" "ndk;25.2.9519653" "cmake;3.22.1"
+
+      - name: Restore release keystore from secrets
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 -d > release.keystore
+          cat > keystore.properties <<EOF
+          storeFile=$GITHUB_WORKSPACE/release.keystore
+          storePassword=$KEYSTORE_PASSWORD
+          keyAlias=$KEY_ALIAS
+          keyPassword=$KEY_PASSWORD
+          EOF
+
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            gradle-${{ runner.os }}-
+
+      - name: Build release AAB
+        run: ./gradlew bundleRelease --stacktrace
+
+      - name: Upload AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: sadshanetguard-ai-release-aab
+          path: app/build/outputs/bundle/release/*.aab
+          retention-days: 30

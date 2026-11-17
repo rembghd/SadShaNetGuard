@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard இணைய - தேவை இல்லை வேர் தடுக்க எளிய மற்றும் மேம்பட்ட வழிகளை வழங்குகிறது. பயன்பாடுகள் மற்றும் முகவரிகளை தனித்தனியாக அனுமதிக்கப்பட்ட அல்லது இயலும் உங்கள் Wi-Fi மற்றும்/அல்லது மொபைல் இணைப்பை அணுகல் மறுக்கப்பட்டது.</string>
     <string name="app_android">நெட்கார்டுக்கு Android 5.1 அல்லது அதற்குப் பிறகு தேவைப்படுகிறது</string>
     <string name="app_xposed">எக்ஸ்போஸ் பல செயலிழப்புகளை ஏற்படுத்துகிறது, இதன் விளைவாக கூகிள் பிளே ஸ்டோரிலிருந்து நெட்கார்ட் அகற்றப்படலாம், எனவே எக்ஸ்போஸ் நிறுவப்பட்டிருக்கும் போது நெட்கார்ட் ஆதரிக்கப்படவில்லை</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/"> தனியுரிமைக் கொள்கை </a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md"> தனியுரிமைக் கொள்கை </a></string>
     <string name="app_first">நெட்கார்ட்டை உருவாக்க மற்றும் சோதிக்க மிகுந்த கவனம் செலுத்தப்பட்டுள்ளது, இருப்பினும் ஒவ்வொரு சாதனத்திலும் நெட்கார்ட் சரியாக வேலை செய்யும் என்று உத்தரவாதம் அளிக்க முடியாது.</string>
     <string name="app_agree">நான் ஏற்கிறேன்</string>
     <string name="app_disagree">நான் மறுக்கிறேன்</string>

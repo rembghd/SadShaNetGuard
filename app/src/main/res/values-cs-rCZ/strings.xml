@@ -3,7 +3,7 @@
     <string name="app_description">NetGuard nabízí jednoduché i pokročilé způsoby pro blokování přístupu k Internetu - vše bez potřeby rootu. Aplikacím a adresám lze individuálně povolit či zakázat přístup k Vašemu Wi-Fi a/nebo datovému připojení.</string>
     <string name="app_android">NetGuard vyžaduje Android 5.1 nebo novější</string>
     <string name="app_xposed">Xposed způsobuje příliš mnoho pádů, což by mohlo vést k odstranění NetGuard z Obchodu Google Play. NetGuard proto není podporován, pokud je nainstalován Xposed</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Zásady soukromí</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Zásady soukromí</a></string>
     <string name="app_first">Vývoji a testování NetGuardu byla věnována velká péče. Není však možné garantovat bezchybné fungování na všech zařízeních.</string>
     <string name="app_agree">Souhlasím</string>
     <string name="app_disagree">Nesouhlasím</string>

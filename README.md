@@ -1,3 +1,18 @@
+# SadSha NetGuard
+
+SadSha NetGuard is a free, open-source, no-root firewall for Android,
+based on [NetGuard](https://github.com/M66B/NetGuard) by Marcel Bokhorst
+(M66B), rebranded for SadSha under the GNU General Public License v3.
+All features are included free: no ads, no in-app purchases, no
+tracking, no account. See `PLAY_LISTING.md` for the Play Store listing,
+`PRIVACY.md` for the privacy policy, and `REBRANDING_GUIDE.md` for the
+rebrand notes. Upstream attribution and the GPL-3.0 `LICENSE` are kept
+in this repo.
+
+Package: `com.sadsha.netguard` · Version: 3.1.0-sadsha · Branch: `ai-studio`
+
+---
+
 # NetGuard
 
 *NetGuard* provides simple and advanced ways to block access to the internet - no root required.

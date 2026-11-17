@@ -3,7 +3,7 @@
     <string name="app_description">A NetGuard egyszerűen és speciálisan blokkolja az internet hozzáférést - nem szükséges root jogosultság hozzá. Az alkalmazásokat és a címeket külön-külön lehet engedélyezni vagy letiltani a Wi-Fi és/vagy a mobil kapcsolatokon.</string>
     <string name="app_android">A NetGuard használatához Android 5.1 vagy újabb szükséges</string>
     <string name="app_xposed">Az Xposed túl sokszor összeomlik, ami a NetGuard eltávolítását eredményezheti a Google Play Áruházból, ezért a NetGuard nem támogatott amikor az Xposed telepítve van</string>
-    <string name="app_privacy"><a href="https://www.netguard.me/privacy/">Adatvédelmi irányelvek</a></string>
+    <string name="app_privacy"><a href="https://github.com/rembghd/SadShaNetGuard/blob/ai-studio/PRIVACY.md">Adatvédelmi irányelvek</a></string>
     <string name="app_first">Nagy figyelmet fordítanak arra, hogy fejlesszék és teszteljék NetGuard-ot, de arra lehetetlen garanciát vállalni, hogy a NetGuard minden eszközön jól fog működni.</string>
     <string name="app_agree">Elfogadom</string>
     <string name="app_disagree">Nem fogadom el</string>
